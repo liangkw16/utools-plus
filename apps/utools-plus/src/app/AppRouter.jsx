@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import BluetoothPage from '../modules/bluetooth/BluetoothPage'
 import SoundPage from '../modules/sound/SoundPage'
+import WifiPage from '../modules/wifi/WifiPage'
 import { DEFAULT_FEATURE, normalizeFeatureCode } from './feature-registry.js'
 
 const FEATURE_COMPONENTS = {
   bluetooth: BluetoothPage,
-  sound: SoundPage
+  sound: SoundPage,
+  wifi: WifiPage
 }
 
 export default function AppRouter () {

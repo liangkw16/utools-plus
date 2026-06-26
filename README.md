@@ -8,7 +8,8 @@
 
 - `bluetooth`: 管理蓝牙连接、断开和蓝牙开关
 - `sound`: 管理音频输入和输出设备，并提供系统声音设置入口
-- 后续可以继续追加 `microphone`、`display`、`network` 等命令
+- `wifi`: 管理 Wi-Fi 开关、当前连接和附近无线网络
+- 后续可以继续追加 `display`、`network` 等命令
 
 ## 命名方案
 
@@ -37,7 +38,8 @@
 │       │   ├── app/
 │       │   ├── modules/
 │       │   │   ├── bluetooth/
-│       │   │   └── sound/
+│       │   │   ├── sound/
+│       │   │   └── wifi/
 │       │   ├── App.jsx
 │       │   ├── main.css
 │       │   └── main.jsx
@@ -55,12 +57,14 @@
 - `app/`: 命令路由、feature registry、全局入口
 - `modules/bluetooth/`: 蓝牙模块页面、组件、文案和偏好逻辑
 - `modules/sound/`: 音频输入和输出设备管理页面
+- `modules/wifi/`: Wi-Fi 状态、开关和附近无线网络页面
 
 `public/preload/` 也改成了命名空间服务模式：
 
 - `services/bluetooth.js`
 - `services/sound.js`
-- `services.js` 作为聚合入口，向前端暴露 `window.services.bluetooth` 和 `window.services.sound`
+- `services/wifi.js`
+- `services.js` 作为聚合入口，向前端暴露 `window.services.bluetooth`、`window.services.sound` 和 `window.services.wifi`
 
 这个结构的关键点是：后面新增命令时，不再往一个页面或一个 preload 文件里堆代码，而是按命令独立扩展。
 
@@ -91,6 +95,16 @@
 - 调节默认输入和输出音量
 - 静音和取消静音默认输入、输出设备
 - 打开系统声音设置
+
+### wifi
+
+已经支持：
+
+- 读取 Wi-Fi 开关状态
+- 读取当前连接网络信息
+- 扫描附近无线网络
+- 打开和关闭 Wi-Fi
+- 跳转系统 Wi-Fi 设置
 
 ## 开发
 

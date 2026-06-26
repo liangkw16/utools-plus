@@ -40,6 +40,23 @@ const builds = [
     ]
   },
   {
+    label: 'wifi-helper',
+    sourcePath: path.join(projectRoot, 'public', 'preload', 'native', 'wifi-helper.swift'),
+    outputPath: path.join(outputDir, 'wifi-helper'),
+    command: '/usr/bin/xcrun',
+    args: (sourcePath, outputPath) => [
+      'swiftc',
+      '-O',
+      sourcePath,
+      '-framework',
+      'CoreWLAN',
+      '-framework',
+      'Foundation',
+      '-o',
+      outputPath
+    ]
+  },
+  {
     label: 'bluetooth-power',
     sourcePath: path.join(projectRoot, 'public', 'preload', 'native', 'bluetooth-power.m'),
     outputPath: path.join(outputDir, 'bluetooth-power'),
