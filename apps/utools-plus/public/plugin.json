@@ -2,7 +2,7 @@
   "pluginName": "uTools Plus",
   "description": "在 uTools 中补充 macOS 系统能力，包括设备连接、输出切换和常用系统快捷控制",
   "author": "liangkw16",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "platform": [
     "darwin"
   ],
