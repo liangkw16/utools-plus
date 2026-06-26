@@ -18,12 +18,8 @@ test('plugin metadata exposes switchboard commands', () => {
     '声音',
     'sound',
     '音频',
-    '输入设备',
-    '输出设备',
     '音量',
-    '调节音量',
-    '静音',
-    '取消静音'
+    '静音'
   ])
   assert.equal(plugin.features[2].code, 'wifi')
   assert.deepEqual(plugin.features[2].cmds, [
@@ -32,4 +28,10 @@ test('plugin metadata exposes switchboard commands', () => {
     '无线网络',
     '网络'
   ])
+})
+
+test('plugin metadata keeps feature commands within market guidance', () => {
+  for (const feature of plugin.features) {
+    assert.ok(feature.cmds.length <= 5, `${feature.code} exposes too many commands`)
+  }
 })
