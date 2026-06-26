@@ -6,7 +6,7 @@
     "dev:web": "vite --host 127.0.0.1",
     "build:helper": "node scripts/build-helper.cjs",
     "build": "npm run build:helper && vite build && node scripts/plugin-manifest.cjs",
-    "test": "node --test public/preload/*.test.js public/preload/services/*.test.js src/modules/bluetooth/lib/*.test.js scripts/*.test.cjs"
+    "test": "node --test public/preload/*.test.js public/preload/services/*.test.js src/modules/*/lib/*.test.js scripts/*.test.cjs"
   },
   "dependencies": {
     "react": "^19.0.0",

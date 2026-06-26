@@ -26,12 +26,28 @@
       ]
     },
     {
-      "code": "speaker",
-      "explain": "管理 macOS 输出设备与声音相关操作",
+      "code": "sound",
+      "explain": "管理 macOS 音频输入和输出设备",
       "cmds": [
-        "扬声器",
-        "speaker",
-        "输出设备"
+        "声音",
+        "sound",
+        "音频",
+        "输入设备",
+        "输出设备",
+        "音量",
+        "调节音量",
+        "静音",
+        "取消静音"
+      ]
+    },
+    {
+      "code": "wifi",
+      "explain": "管理 macOS Wi-Fi 状态和附近无线网络",
+      "cmds": [
+        "Wi-Fi",
+        "wifi",
+        "无线网络",
+        "网络"
       ]
     }
   ]

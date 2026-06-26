@@ -3,9 +3,13 @@ export const FEATURE_REGISTRY = Object.freeze({
     code: 'bluetooth',
     label: 'Bluetooth'
   },
-  speaker: {
-    code: 'speaker',
-    label: 'Speaker'
+  sound: {
+    code: 'sound',
+    label: 'Sound'
+  },
+  wifi: {
+    code: 'wifi',
+    label: 'Wi-Fi'
   }
 })
 

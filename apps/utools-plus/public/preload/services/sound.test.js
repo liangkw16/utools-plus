@@ -3,9 +3,9 @@ const assert = require('node:assert/strict')
 
 const {
   getSoundSettingsInvocationCandidates
-} = require('./speaker')
+} = require('./sound')
 
-test('speaker service provides sound settings open candidates', () => {
+test('sound service provides sound settings open candidates', () => {
   const candidates = getSoundSettingsInvocationCandidates()
 
   assert.deepEqual(candidates[0], {

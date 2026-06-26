@@ -3,7 +3,18 @@ const assert = require('node:assert/strict')
 
 const services = require('./services')
 
-test('services exposes namespaced bluetooth and speaker modules', () => {
+test('services exposes namespaced bluetooth, sound, and wifi modules', () => {
   assert.equal(typeof services.bluetooth.openBluetoothSettings, 'function')
-  assert.equal(typeof services.speaker.openSoundSettings, 'function')
+  assert.equal(typeof services.sound.openSoundSettings, 'function')
+  assert.equal(typeof services.sound.getSoundSnapshot, 'function')
+  assert.equal(typeof services.sound.setDefaultInputDevice, 'function')
+  assert.equal(typeof services.sound.setDefaultOutputDevice, 'function')
+  assert.equal(typeof services.sound.setOutputVolume, 'function')
+  assert.equal(typeof services.sound.setInputVolume, 'function')
+  assert.equal(typeof services.sound.setOutputMuted, 'function')
+  assert.equal(typeof services.sound.setInputMuted, 'function')
+  assert.equal(typeof services.wifi.getWifiSnapshot, 'function')
+  assert.equal(typeof services.wifi.connectWifiNetwork, 'function')
+  assert.equal(typeof services.wifi.setWifiPower, 'function')
+  assert.equal(typeof services.wifi.openWifiSettings, 'function')
 })
